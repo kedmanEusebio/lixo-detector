@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lixo Detector</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1> Gestao de Residuos </h1>
+
+  <div class="controls">
+    <button id="startBtn">Start Detecting</button>
+    <button id="stopBtn" disabled>Stop Detecting</button>
+
+    <!-- Dropdown para selecionar a câmera -->
+    <label for="cameraSelect">Câmera:</label>
+    <select id="cameraSelect"></select>
+  </div>
+
+  <video id="webcam" autoplay playsinline muted></video>
+  <canvas id="canvas" style="display: none;"></canvas>
+
+  <div id="label-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image"></script>
+  <script src="script.js"></script>
+</body>
+</html>
